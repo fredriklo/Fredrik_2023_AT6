@@ -3,11 +3,8 @@ class DataValidator:
     def check_positive_int(list_of_strings):
         valid_positive_ints = []
         for string in list_of_strings:
-            try:
-                if int(string) >= 0:
-                    valid_positive_ints.append(string)
-            except:
-                continue
+            if string.isnumeric():
+                valid_positive_ints.append(string)
         return valid_positive_ints
     
     
